@@ -1,0 +1,10 @@
+{
+  "name": "Scroll",
+  "description": "Quiqr template based on the Hugo Scroll theme for pretty, quick and simple single-page websites.",
+  "homepage": "https://github.com/mipmip/quiqr-scroll-template/",
+  "demoUrl": "https://mipmip.github.io/quiqr-scroll-template/",
+  "license": "MIT",
+  "licenseURL": "https://github.com/mipmip/quiqr-scroll-template/blob/main/LICENSE",
+  "author": "Pim Snel, @zjedi, Jan Raasch",
+  "authorHomepage": "https://pimsnel.com"
+}

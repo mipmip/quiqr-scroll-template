@@ -17,4 +17,5 @@
   matchRole: siteDeveloper
   menuItems:
     - key: dashboard
+    - key: etalage
     - key: readme

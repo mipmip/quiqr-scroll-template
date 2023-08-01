@@ -1,13 +1,13 @@
-# README FOR NEW SITE
+# Instructions
+
+- The first section can be edited in `Content -> Homepage`
+- All other sections can be edited in `Content -> Homepage Components`
+- Upload images in `Assets -> Images`
+- Many parameters can be changes in `Settings -> Config`
+- Change colors of the website in `Settings -> Design`
 
 If you're a website developer you can read the [Quiqr Site Developer
-Docs](https://book.quiqr.org/)
-how to customize your Site Admin.
-
-Quiqr is a Desktop App made for [Hugo](https://gohugo.io). Read all about
-[creating Hugo websites](https://gohugo.io/getting-started/quick-start/).
-
-To change this about text, edit this file: */home/pim/Quiqr Data/temp/siteFromDir/quiqr/home/index.md*.
+Docs](https://book.quiqr.org/) how to customize your Site Admin.
 
 Happy Creating.
 

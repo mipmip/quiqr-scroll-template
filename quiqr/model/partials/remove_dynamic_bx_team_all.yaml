@@ -1,8 +1,0 @@
----
-
-title: Team
-content_type: BX Team All
-fields:
-  - key: enable
-    title: Enable
-    type: boolean

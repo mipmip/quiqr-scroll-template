@@ -1,3 +1,6 @@
+- key: etalage
+  _mergePartial: etalage
+
 - key: images
   title: Images
   hidePreviewIcon: true
