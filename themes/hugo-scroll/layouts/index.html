@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $baseUrl := .Site.BaseURL }}
 {{ $headless := .Site.GetPage "/homepage" }}
 {{ $sections := $headless.Resources.ByType "page" }}
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
@@ -6,7 +7,7 @@
 
 <!-- Welcome screen that scrolls out of view -->
 {{ if not .Params.header_use_video }}
-<header id="site-head" class="withCenteredImage" {{ with .Params.header_image }}style="background-image: url(/images/{{ . }})"{{ end }}>
+  <header id="site-head" class="withCenteredImage" {{ with .Params.header_image }}style="background-image: url({{$baseUrl}}images/{{ . }})"{{ end }}>
 {{ else }}
 <header id="site-head">
 {{ end }}
@@ -21,7 +22,7 @@
         {{ end }}
 
         <div id="site-head-content" class="inner">
-            {{ with .Params.header_logo }}<img id="blog-logo" src="/images/{{ . }}" />{{ end }}
+          {{ with .Params.header_logo }}<img id="blog-logo" src="{{$baseUrl}}images/{{ . }}" />{{ end }}
 
             {{ if .Site.Params.title_guard }}<div class="title-and-description-guard">{{ end }}
               {{ with .Params.header_headline }}<h1 class="blog-title">{{ . | safeHTML }}</h1>{{ end }}
