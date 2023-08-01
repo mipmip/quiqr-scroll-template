@@ -25,7 +25,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --baseURL /quiqr-scroll-template
+        run: hugo --minify --baseURL /quiqr-scroll-template/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
