@@ -1,5 +1,7 @@
 # quiqr-scroll-template
 
+<a href="https://github.com/quiqr/quiqr-community-templates"><img src="https://quiqr.org/quir-community-templates-badge.svg" /></a>
+
 Quiqr template based on the [Hugo Scroll theme](https://github.com/zjedi/hugo-scroll) for pretty, quick and simple single-page websites.
 
 The CMS in Quiqr features editing all menu items, text and images and easily lets you change the design.
