@@ -1,0 +1,20 @@
+- title: Content
+  menuItems:
+    - key: frontpage
+    - key: otherpages
+
+- title: Assets
+  menuItems:
+    - key: images
+
+- title: Settings
+  menuItems:
+    - key: config
+    - key: design
+
+- key: Developer
+  title: "Developer"
+  matchRole: siteDeveloper
+  menuItems:
+    - key: dashboard
+    - key: readme

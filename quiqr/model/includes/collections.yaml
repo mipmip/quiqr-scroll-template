@@ -1,0 +1,24 @@
+- key: otherpages
+  title: Homepage Components
+  folder: content/homepage
+  previewUrlBase: /
+  extension: md
+  dataformat: yaml
+  itemtitle: Homepage item
+  fields:
+    - key: title
+      type: string
+    - key: external
+      title: external_url
+      type: string
+    - key: header_menu_title
+      type: string
+    - key: navigation_menu_title
+      type: string
+    - key: weight
+      type: number
+    - key: header_menu
+      type: boolean
+    - key: mainContent
+      type: markdown
+

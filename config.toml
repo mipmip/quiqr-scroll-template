@@ -1,0 +1,37 @@
+baseURL = "https://example.com"
+disableKinds = [
+  "section",
+  "taxonomy",
+  "term",
+  "RSS",
+  "robotsTXT"
+]
+defaultContentLanguage = "en"
+theme = "hugo-scroll"
+title = "Jane Doe - Nutrition Coach & Chef Consultant"
+
+[params]
+favicon = "apple-touch-icon.png"
+images = "cover-image.jpg"
+title_guard = false
+title = "Jane Doe - Nutrition Coach & Chef Consultant"
+description = "Nutrition Coach & Chef Consultant"
+copyright = "© Jane Doe"
+hidedesignbyline = false
+invertSectionColors = false
+resources = []
+
+  [params.meta]
+  keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
+
+  [params.colors]
+  cover_text_color = "#37501a"
+  highlight = "#86c440"
+  highlight_inverse_contrast = "white"
+  sticky_menu_text_color = "#9fd067"
+  section_light_text_color = "#3a4145"
+  section_light_bg_color = "#f2efe8"
+  section_dark_bg_color = "#b80135"
+  section_uni_code_bg_color = "#e0ded7"
+  footer_color_background = "#22343a"
+  footer_color = "#bbc7cc"

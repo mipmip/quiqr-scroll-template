@@ -1,0 +1,55 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+
+{{ with .Site.Params.favicon }}
+  <link rel="shortcut icon" href="/images/{{ . | absURL }}" type="image/png"
+/>{{ end }}
+
+{{ with .Site.Params.description }}
+  <meta name="description" content="{{ . }}"
+/>{{ end }}
+{{ with .Site.Params.meta.keywords }}
+  <meta name="keywords" content="{{ . }}"
+/>{{ end }}
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{{ $stylesheetNormalize := resources.Get "css/normalize.css" }}
+{{ $stylesheetFA := resources.Get "css/fork-awesome.css" }}
+{{ $stylesheetFonts := resources.Get "css/fonts.css" }}
+{{ $stylesheetGeneric := resources.Get "css/generic.css" }}
+
+{{ $stylesheetScreen := ( resources.Get "css/_index.scss" | resources.ToCSS ) }}
+
+{{ $stylesheet := slice $stylesheetNormalize $stylesheetFA $stylesheetFonts $stylesheetGeneric $stylesheetScreen | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $stylesheet.Permalink }}" type="text/css" integrity="{{ $stylesheet.Data.Integrity }}" />
+
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/schema.html" . }}
+
+<style>
+
+:root {
+ --cover-text-color:{{site.Params.colors.cover_text_color | default "#37501a"}};
+ --highlight:{{site.Params.colors.highlight | default "#86c440"}};
+ --highlight-inverse-contrast:{{site.Params.colors.highlight_inverse_contrast | default "white"}};
+ --sticky-menu-text-color:{{site.Params.colors.sticky_menu_text_color | default "#9fd067"}};
+ --section-light-text-color:{{site.Params.colors.section_light_text_color | default "#3a4145"}};
+ --section-light-bg-color:{{site.Params.colors.section_light_bg_color | default "#f2efe8"}};
+ --section-dark-bg-color:{{site.Params.colors.section_dark_bg_color | default "#b80135"}};
+ --section-uni-code-bg-color:{{site.Params.colors.section_uni_code_bg_color | default "#e0ded7"}};
+ --footer-color-background:{{site.Params.colors.footer_color_background | default "#22343a"}};
+ --footer-color:{{site.Params.colors.footer_color | default "#bbc7cc"}};
+}
+</style>
+
+<!-- A partial to be overwritten by the user.
+     Simply place a custom_head.html into
+     your local /layouts/partials-directory -->
+{{- partial "custom_head.html" . -}}

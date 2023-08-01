@@ -1,0 +1,51 @@
+---
+key: params
+hidePreviewIcon: true
+title: Params
+fields:
+
+  - key: title
+    type: string
+
+  - key: params
+    group: params
+    type: pull
+    fields:
+      - key: title
+        type: string
+
+      - key: description
+        type: string
+
+      - key: copyright
+        type: string
+
+      - key: title_guard
+        type: boolean
+
+      - key: hidedesignbyline
+        type: boolean
+
+      - key: invertSectionColors
+        type: boolean
+
+      - key: images
+        title: social media image
+        type: image-select
+        path: /static/images
+        buttonTitle: select image
+        tip: select image for logo
+
+      - key: favicon
+        type: image-select
+        path: /static/images
+        buttonTitle: select favicon image
+        tip: select image for favicon
+
+      - key: meta
+        group: meta
+        type: pull
+        fields:
+          - key: keywords
+            type: string
+

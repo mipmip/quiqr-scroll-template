@@ -1,0 +1,46 @@
+---
+file: config.toml
+hidePreviewIcon: true
+title: Design
+fields:
+  - key: params
+    group: params
+    type: pull
+    fields:
+
+      - key: colors
+        group: colors
+        type: pull
+        fields:
+
+          - key: cover_text_color
+            type: color
+            autosave: true
+          - key: highlight
+            type: color
+            autosave: true
+          - key: highlight_inverse_contrast
+            type: color
+            autosave: true
+          - key: sticky_menu_text_color
+            type: color
+            autosave: true
+          - key: section_light_text_color
+            type: color
+            autosave: true
+          - key: section_light_bg_color
+            type: color
+            autosave: true
+          - key: section_dark_bg_color
+            type: color
+            autosave: true
+          - key: section_uni_code_bg_color
+            type: color
+            autosave: true
+          - key: footer_color_background
+            type: color
+            autosave: true
+          - key: footer_color
+            type: color
+            autosave: true
+
